@@ -42,9 +42,19 @@ import { slideAndFadeAnimation } from '../../animations/slide-and-fade.animation
             opacity: 0
           }),
         ]),
-        useAnimation(slideAndFadeAnimation),
+        useAnimation(slideAndFadeAnimation, {
+          params: {
+            time: '250ms',
+            startColor: 'rgb(201, 157, 242)'
+          }
+        }),
         group([
-          useAnimation(flashAnimation),
+          useAnimation(flashAnimation, {
+            params: {
+              time: '250ms',
+              flashColor: 'rgb(249,179,111)'
+            }
+          }),
           query('.comment-text', [
             animate('250ms', style({
                 opacity: 1

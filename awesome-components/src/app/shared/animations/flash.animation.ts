@@ -2,10 +2,10 @@ import { animate, animation, sequence, style } from '@angular/animations'
 
 export const flashAnimation = animation([
     sequence([
-        animate('250ms', style({
-          'background-color': 'rgb(255, 7, 147)',
+        animate('{{ time }}', style({
+          'background-color': '{{ flashColor }}',
         })),
-        animate('250ms', style({
+        animate('{{ time }}', style({
           'background-color': 'white',
         }))
       ]),
